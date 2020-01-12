@@ -1,0 +1,8 @@
+{
+    "name": "Klipper Network Connection",
+    "author": "ME",
+    "description": "Manages network connections to Ultimaker networked printers.",
+    "version": "0.0.1",
+    "api": "7.0",
+    "i18n-catalog": "cura"
+}

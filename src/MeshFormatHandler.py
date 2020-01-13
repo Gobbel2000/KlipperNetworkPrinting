@@ -90,16 +90,19 @@ class MeshFormatHandler:
 
         machine_file_formats = global_stack.getMetaDataEntry("file_formats").split(";")
         machine_file_formats = [file_type.strip() for file_type in machine_file_formats]
+        print(file_formats)
+        print(machine_file_formats)
 
         # Exception for UM3 firmware version >=4.4: UFP is now supported and should be the preferred file format.
-        if "application/x-ufp" not in machine_file_formats and Version(firmware_version) >= Version("4.4"):
-            machine_file_formats = ["application/x-ufp"] + machine_file_formats
+        #if "application/x-ufp" not in machine_file_formats and Version(firmware_version) >= Version("4.4"):
+        #    machine_file_formats = ["application/x-ufp"] + machine_file_formats
 
         # Take the intersection between file_formats and machine_file_formats.
         format_by_mimetype = {f["mime_type"]: f for f in file_formats}
 
         # Keep them ordered according to the preference in machine_file_formats.
         file_formats = [format_by_mimetype[mimetype] for mimetype in machine_file_formats]
+        file_formats = [format_by_mimetype["text/x-gcode"]]
 
         if len(file_formats) == 0:
             Logger.log("e", "There are no file formats available to write with!")

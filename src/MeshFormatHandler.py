@@ -90,8 +90,6 @@ class MeshFormatHandler:
 
         machine_file_formats = global_stack.getMetaDataEntry("file_formats").split(";")
         machine_file_formats = [file_type.strip() for file_type in machine_file_formats]
-        print(file_formats)
-        print(machine_file_formats)
 
         # Exception for UM3 firmware version >=4.4: UFP is now supported and should be the preferred file format.
         #if "application/x-ufp" not in machine_file_formats and Version(firmware_version) >= Version("4.4"):

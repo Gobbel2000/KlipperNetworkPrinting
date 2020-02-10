@@ -7,3 +7,8 @@ to be together with a module for Klipper printers that's yet to be made.
 # Installation
 
 Copy or symlink this directory to `/usr/lib/cura/plugins/`.
+
+
+### Show differences with original
+
+`git diff --color --no-index --diff-filter=a ../Cura/plugins/UM3NetworkPrinting/ ./`

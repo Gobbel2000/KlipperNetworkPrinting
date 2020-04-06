@@ -32,6 +32,7 @@ Item
         renderType: Text.NativeRendering
     }
 
+    /**
     Item
     {
         id: manageQueueLabel
@@ -82,6 +83,7 @@ Item
             manageQueueText.font.underline = false
         }
     }
+    */
 
     Row
     {

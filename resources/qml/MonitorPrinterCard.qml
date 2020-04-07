@@ -135,6 +135,7 @@ Item
                     }
                     text: printer ? printer.type : ""
                 }
+                /**
                 Item
                 {
                     id: managePrinterLink
@@ -183,6 +184,7 @@ Item
                         manageQueueText.font.underline = false
                     }
                 }
+                */
             }
 
             MonitorPrinterConfiguration

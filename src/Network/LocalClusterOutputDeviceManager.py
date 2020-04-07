@@ -161,9 +161,6 @@ class LocalClusterOutputDeviceManager:
 
         # Detect the machine type based on the BOM number that is sent over the network.
         properties[b"printer_type"] = b"Unknown"
-        #if machine_identifier == "Klipper Printer":
-        #    properties[b"printer_type"] = b"SuperKlipper"
-        #properties[b"printer_type"] = b"Klipper"
         for bom, p_type in printer_type_identifiers.items():
             if machine_identifier.startswith(bom):
                 properties[b"printer_type"] = bytes(p_type, encoding="utf8")
